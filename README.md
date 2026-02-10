@@ -33,19 +33,12 @@ Scikit-learn
 The dataset contains the following parameters (features) used to predict the Selling_Price:
 
 Selling_Price: The price at which the car is being sold (Target Variable).
-
 Present_Price: The current ex-showroom price of the car.
-
 Kms_Driven: The total distance the car has been driven in kilometers.
-
 Fuel_Type: The type of fuel used (Petrol, Diesel, CNG).
-
 Seller_Type: Defines if the seller is a Dealer or an Individual.
-
 Transmission: The gear transmission type (Manual or Automatic).
-
 Owner: The number of previous owners the car has had.
-
 Year: The manufacturing year of the car (used to calculate the car's age).
 --
 ## Methodology
