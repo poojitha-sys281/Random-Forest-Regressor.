@@ -1,91 +1,91 @@
 # Random-Forest-Regressor.
-Used Car Price Prediction using Random Forest Regressor
-## Project Overview
-This project implements a Random Forest Regressor model to predict the selling price of used cars. By analyzing various vehicle attributes—such as the car's age, current market value, and usage history—the model provides accurate price valuations to assist in the pre-owned automobile market.
---
-## Objectives
-To process and clean the used car dataset
+# Random Forest Regressor – Used Car Price Prediction
 
-To perform feature engineering (calculating vehicle age)
+##  Project Overview
+This project uses a **Random Forest Regressor** machine learning model to predict the selling price of used cars. By analyzing important vehicle attributes such as age, present market value, fuel type, and usage history, the model provides accurate price estimations for the pre-owned automobile market.
 
-To handle categorical variables using One-Hot Encoding
-
-To analyze the correlation between vehicle features and selling price
-
-To build and train a Random Forest Regressor for price prediction
---
-## Technologies Used
-Python
-
-Jupyter Notebook
-
-Pandas
-
-NumPy
-
-Matplotlib
-
-Seaborn
-
-Scikit-learn
 ---
-## Dataset Description
-The dataset contains the following parameters (features) used to predict the Selling_Price:
 
-Selling_Price: The price at which the car is being sold (Target Variable).
-Present_Price: The current ex-showroom price of the car.
-Kms_Driven: The total distance the car has been driven in kilometers.
-Fuel_Type: The type of fuel used (Petrol, Diesel, CNG).
-Seller_Type: Defines if the seller is a Dealer or an Individual.
-Transmission: The gear transmission type (Manual or Automatic).
-Owner: The number of previous owners the car has had.
-Year: The manufacturing year of the car (used to calculate the car's age).
---
-## Methodology
-Data Loading: Importing the car data.csv file.
+##  Objectives
+- Clean and preprocess the used car dataset  
+- Perform feature engineering to calculate vehicle age  
+- Encode categorical variables using One-Hot Encoding  
+- Analyze correlations between vehicle features and selling price  
+- Build and train a Random Forest Regressor model  
+- Predict selling prices for used cars  
 
-Feature Engineering:
+---
 
-Created a new feature Current_Year and no_of_years to quantify the car's age.
+##  Technologies Used
+- Python  
+- Jupyter Notebook  
+- Pandas  
+- NumPy  
+- Matplotlib  
+- Seaborn  
+- Scikit-learn  
 
-Formula: no_of_years = Current_Year - Year.
+---
 
-Dropped the original Year and Car_Name columns as they were no longer needed.
+##  Dataset Description
+The dataset contains the following features used for prediction:
 
-Categorical Encoding:
+- **Selling_Price**: Price at which the car is sold (Target Variable)  
+- **Present_Price**: Current ex-showroom price of the car  
+- **Kms_Driven**: Total distance driven (in kilometers)  
+- **Fuel_Type**: Petrol, Diesel, or CNG  
+- **Seller_Type**: Dealer or Individual  
+- **Transmission**: Manual or Automatic  
+- **Owner**: Number of previous owners  
+- **Year**: Manufacturing year of the car  
 
-Applied One-Hot Encoding to convert Fuel_Type, Seller_Type, and Transmission into numerical values.
+---
 
-Utilized drop_first=True to prevent multicollinearity (Dummy Variable Trap).
+##  Methodology
 
-Data Visualization:
+### 1. Data Loading
+- Imported the `car data.csv` dataset into the notebook
 
-Used Seaborn Pairplot to visualize relationships between parameters.
+### 2. Feature Engineering
+- Created a new feature **Current_Year**
+- Calculated car age using:
+- Removed unnecessary columns such as `Year` and `Car_Name`
 
-Generated a Heatmap to analyze the correlation between features like Present_Price and Selling_Price.
---
-## Model Training:
+### 3. Categorical Encoding
+- Applied One-Hot Encoding to:
+- Fuel_Type  
+- Seller_Type  
+- Transmission  
+- Used `drop_first=True` to avoid multicollinearity
 
-Split the data into training and testing sets.
+### 4. Data Visualization
+- Used Seaborn Pairplot to visualize feature relationships  
+- Created a correlation Heatmap to identify influential features
 
-Trained the Random Forest Regressor to predict the final selling price.
---
-## Results
-The model identified Present_Price and Car Age (no_of_years) as the most significant factors influencing the selling price.
+### 5. Model Training
+- Split the dataset into training and testing sets  
+- Trained a **Random Forest Regressor** to predict car selling prices  
 
-The Random Forest Regressor successfully captured non-linear relationships, providing robust predictions for used car valuations.
---
-## How to Run the Project
-Clone this repository
+---
 
-Ensure car data.csv is in the project directory
+##  Results
+- **Present_Price** and **Car Age (no_of_years)** were identified as the most important factors  
+- The Random Forest model effectively captured non-linear patterns  
+- Produced accurate and reliable predictions for used car pricing  
 
-Open the Jupyter Notebook
+---
 
-Install dependencies: pip install pandas numpy matplotlib seaborn scikit-learn
+##  How to Run the Project
+1. Clone this repository  
+2. Ensure `car data.csv` is available in the project directory  
+3. Open the Jupyter Notebook  
+4. Install dependencies:
+5. Run all cells to preprocess data and train the model  
 
-Run all cells to process the data and train the model
+---
 
-## Conclusion
-Random Forest Regression is highly effective for pricing used cars. By considering key parameters like the car's present price, age, and fuel type, the model delivers accurate estimates that are crucial for decision-making in the automotive resale market.
---
+##  Conclusion
+Random Forest Regression is highly effective for predicting used car prices. By incorporating key parameters such as present price, vehicle age, fuel type, and ownership details, the model delivers accurate price estimations that are valuable in the automotive resale market.
+
+---
+
